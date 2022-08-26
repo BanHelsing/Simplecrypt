@@ -1,2 +1,2 @@
-# enigma
+# Enigma
 Simple encryption for text
