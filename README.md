@@ -1,4 +1,4 @@
-# Enigma
+# Simplecrypt
 
 ## Dependencies:
     - Random
