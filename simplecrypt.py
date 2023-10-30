@@ -1,6 +1,8 @@
 import random as r
 import regex as re
 
+# .venv\Scripts\activate
+
 #excluded = [34, 44]
 #        = [ ",  ']
 valid = [i for i in range(33,126)]
@@ -34,6 +36,8 @@ def encrypt(message, key, file_name = "") -> str:
     Returns:
         str: Encrypted string
     """
+    #TODO add dopc for filename
+    # the fuck is this comment above supposed to mean?
     if not chk_key(key):
         raise Exception("Invalid encryption key")
     counter = 0
@@ -61,9 +65,8 @@ def encrypt(message, key, file_name = "") -> str:
         counter += 1
     if file_name == "":
         return coded_message
-    with open(file_name,'w', encoding="ascii") as f:
-        f.write(coded_message)
-        f.close()
+    with open(file_name,'w', encoding="ascii") as output:
+        output.write(coded_message)
         return coded_message
 
 
